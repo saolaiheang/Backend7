@@ -1,5 +1,8 @@
-# Api link
+### Api link get product all
 here link: https://jolly-angel-aabddcd512.strapiapp.com/api/products
+###Api link get categories
+here link: https://jolly-angel-aabddcd512.strapiapp.com/api/categories
+### Api link
 
 # 🚀 Getting started with Strapi
 
