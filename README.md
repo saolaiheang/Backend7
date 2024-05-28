@@ -2,8 +2,8 @@
 here link: https://jolly-angel-aabddcd512.strapiapp.com/api/products
 ### Api link get categories
 here link: https://jolly-angel-aabddcd512.strapiapp.com/api/categories
-### Api link get product by category,limit
-here link:https://jolly-angel-aabddcd512.strapiapp.com/api/products?populate=*&pagination[pageSize]=6
+### Api link get product by category,limit6
+here link:https://jolly-angel-aabddcd512.strapiapp.com/api/products?populate=*&filters[CategoryID]=${CategoryID}&pagination[pageSize]=6
 
 # 🚀 Getting started with Strapi
 
