@@ -1,5 +1,6 @@
 # AgroMarked Stories API
-### Api link get product all
+This API allows you to manage and retrieve AgroMarket stories. Below are the available endpoints and their functionalities.
+### Endpoints
 here link: https://jolly-angel-aabddcd512.strapiapp.com/api/products
 ### Api link get categories
 here link: https://jolly-angel-aabddcd512.strapiapp.com/api/categories
