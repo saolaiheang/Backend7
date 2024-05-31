@@ -6,38 +6,39 @@ https://jolly-angel-aabddcd512.strapiapp.com/
 ```
 ### Get All AgroMarket
 ```
-GET /api/categories
+GET /api/products
 ```
-Example:https://jolly-angel-aabddcd512.strapiapp.com/api/categories
+Example:https://jolly-angel-aabddcd512.strapiapp.com/api/products
 
 Returns a list of all AgroMarket.
 
 ### Get a Single AgroMarket
 
 ```
-GET /api/categories/{id}
+GET /api/products/{id}
 ```
-Example:https://jolly-angel-aabddcd512.strapiapp.com/api/categories/1
+Example:https://jolly-angel-aabddcd512.strapiapp.com/api/products/1
 
 Returns a single AgroMarket by ID.
 
 ### Sort AgroMarket by Price(order: 'asc' or 'desc')
 
 ```
-GET /api/categories/sortByPrice/{order}
+GET /api/products/sortByPrice/{order}
 ```
 
-Example: https://categories-api.vercel.app/api/categories/sortByPrice/asc
+Example: https://products-api.vercel.app/api/products/sortByPrice/asc
 
 Returns a sorted list of AgroMarket by Price (ascending or descending).
 
 ### Sort AgroMarkey by Created Date
 
 ```
-GET /api/categories/sortByCreatedAt/{order}
+GET /api/products/sortByCreatedAt/{order}
+
 ```
 
-Example:https://categories-api.vercel.app/api/categories/sortByCreatedAt/asc
+Example:https://products-api.vercel.app/api/products/sortByCreatedAt/asc
 
 Returns a sorted list of AgroMarket by created date (ascending or descending).
 
@@ -50,6 +51,8 @@ Make requests to the respective endpoints using your preferred HTTP client.
 The API responses will be in JSON format and follow this structure:
 
 ```
+## Example Data
+
 {
             "id": 1,
             "attributes": {
