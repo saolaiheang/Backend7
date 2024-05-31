@@ -9,12 +9,16 @@ https://jolly-angel-aabddcd512.strapiapp.com/
 GET /api/categories
 ```
 Example:https://jolly-angel-aabddcd512.strapiapp.com/api/categories
+
 Returns a list of all AgroMarket.
+
 ### Get a Single AgroMarket
+
 ```
 GET /api/categories/{id}
 ```
 Example:https://jolly-angel-aabddcd512.strapiapp.com/api/categories/1
+
 Returns a single AgroMarket by ID.
 
 
