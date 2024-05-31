@@ -21,63 +21,115 @@ Example:https://jolly-angel-aabddcd512.strapiapp.com/api/categories/1
 
 Returns a single AgroMarket by ID.
 
-
-here link:https://jolly-angel-aabddcd512.strapiapp.com/api/products?populate=*&filters[CategoryID]=${CategoryID}&pagination[pageSize]=6
-
-# 🚀 Getting started with Strapi
-
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
-
-### `develop`
-
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+### Sort AgroMarket by Price(order: 'asc' or 'desc')
 
 ```
-npm run develop
-# or
-yarn develop
+GET /api/categories/sortByPrice/{order}
 ```
 
-### `start`
+Example: https://categories-api.vercel.app/api/categories/sortByPrice/asc
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+Returns a sorted list of AgroMarket by Price (ascending or descending).
 
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+### Sort AgroMarkey by Created Date
 
 ```
-npm run build
-# or
-yarn build
+GET /api/categories/sortByCreatedAt/{order}
 ```
 
-## ⚙️ Deployment
+Example:https://categories-api.vercel.app/api/categories/sortByCreatedAt/asc
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+Returns a sorted list of AgroMarket by created date (ascending or descending).
 
-## 📚 Learn more
+### Usage
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+Make requests to the respective endpoints using your preferred HTTP client.
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+### Response Format
 
-## ✨ Community
+The API responses will be in JSON format and follow this structure:
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+```
+{
+            "id": 1,
+            "attributes": {
+                "Name": "Mango",
+                "Price": 2.5,
+                "Organic": true,
+                "OriginProvince": "Kampong Speu",
+                "OwnerID": 1,
+                "ProductID": 1,
+                "Quantity": "100",
+                "createdAt": "2024-05-21T06:04:14.380Z",
+                "updatedAt": "2024-05-21T06:04:17.946Z",
+                "publishedAt": "2024-05-21T06:04:17.917Z",
+                "images": {
+                    "data": [
+                        {
+                            "id": 1,
+                            "attributes": {
+                                "name": "Mango.jpg",
+                                "alternativeText": null,
+                                "caption": null,
+                                "width": 680,
+                                "height": 490,
+                                "formats": {
+                                    "small": {
+                                        "ext": ".jpg",
+                                        "url": "https://jolly-angel-aabddcd512.media.strapiapp.com/small_Mango_3091489cca.jpg",
+                                        "hash": "small_Mango_3091489cca",
+                                        "mime": "image/jpeg",
+                                        "name": "small_Mango.jpg",
+                                        "path": null,
+                                        "size": 16.56,
+                                        "width": 500,
+                                        "height": 360,
+                                        "sizeInBytes": 16563
+                                    },
+                                    "thumbnail": {
+                                        "ext": ".jpg",
+                                        "url": "https://jolly-angel-aabddcd512.media.strapiapp.com/thumbnail_Mango_3091489cca.jpg",
+                                        "hash": "thumbnail_Mango_3091489cca",
+                                        "mime": "image/jpeg",
+                                        "name": "thumbnail_Mango.jpg",
+                                        "path": null,
+                                        "size": 4.74,
+                                        "width": 216,
+                                        "height": 156,
+                                        "sizeInBytes": 4738
+                                    }
+                                },
+                                "hash": "Mango_3091489cca",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "size": 26.63,
+                                "url": "https://jolly-angel-aabddcd512.media.strapiapp.com/Mango_3091489cca.jpg",
+                                "previewUrl": null,
+                                "provider": "strapi-provider-upload-strapi-cloud",
+                                "provider_metadata": null,
+                                "createdAt": "2024-05-21T06:03:57.132Z",
+                                "updatedAt": "2024-05-21T06:03:57.132Z"
+                            }
+                        }
+                    ]
+                },
+                "CategoryID": {
+                    "data": {
+                        "id": 1,
+                        "attributes": {
+                            "Name": "Fruit",
+                            "createdAt": "2024-05-21T04:17:41.945Z",
+                            "updatedAt": "2024-05-21T04:17:45.637Z",
+                            "publishedAt": "2024-05-21T04:17:45.631Z"
+                        }
+                    }
+                },
+                "strapi_stage": {
+                    "data": null
+                },
+                "strapi_assignee": {
+                    "data": null
+                }
+            }
+        },
+```
