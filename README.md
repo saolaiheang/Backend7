@@ -9,8 +9,15 @@ https://jolly-angel-aabddcd512.strapiapp.com/
 GET /api/categories
 ```
 Example:https://jolly-angel-aabddcd512.strapiapp.com/api/categories
+Returns a list of all AgroMarket.
+### Get a Single AgroMarket
+```
+GET /api/categories/{id}
+```
+Example:https://jolly-angel-aabddcd512.strapiapp.com/api/categories/1
+Returns a single AgroMarket by ID.
 
-### Api link get product by category,limit6
+
 here link:https://jolly-angel-aabddcd512.strapiapp.com/api/products?populate=*&filters[CategoryID]=${CategoryID}&pagination[pageSize]=6
 
 # 🚀 Getting started with Strapi
