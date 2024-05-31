@@ -50,8 +50,8 @@ Make requests to the respective endpoints using your preferred HTTP client.
 
 The API responses will be in JSON format and follow this structure:
 
-```
 ## Example Data
+```
 
 {
             "id": 1,
